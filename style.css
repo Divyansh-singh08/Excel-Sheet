@@ -1,0 +1,289 @@
+/* Default CSS */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin:0;
+}
+/* ------------------------------------------------------- */
+.page-actions-cont{
+    /* width:3rem; */
+    height:3rem;
+    background-color: #267045f5;
+    /* border:2px solid red; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    padding-left:1rem;
+    cursor: pointer;
+}
+
+.page-action{
+    /* this help making gap between all the property */
+    /* margin:0.5rem; */
+    width: 3.5rem;
+    height: 2rem;
+    text-align: center;
+    color: #f1f2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.selected-page-action {
+    background-color: #f1f2f6;
+    color: #267045f5;
+}
+
+
+/* ----------------------------------------------------------------- */
+.cellprop-actions-cont{
+    /* REM- relative to its root element which is 16px */
+    height: 3rem;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    /* text-align: ; */
+}
+/* anyone who come in this container will be now inline block */
+/* this will help making to use margin on them */
+.cellprop-actions-cont > * {
+    display: inline-block;
+    margin-right: 1rem;
+    
+}
+.cellprop-actions-cont:hover > * {
+    cursor: pointer;
+}
+.cellprop-actions-cont > select {
+    border: none;
+    border-radius: 2px;
+    outline: none;
+
+}
+.font-family-prop{
+    padding:0.2rem;
+    background-color: #ffffff;
+}
+
+.font-size-prop{
+    padding:0.2rem;
+    background-color: #ffffff;
+}
+
+
+
+/* ----------------------------------------------------------------------- */
+
+/* color fixing for the picker */
+.color-prop { 
+    position: relative;
+}
+.color-prop > input{
+    /* this will target the input tag and apply css */
+    /* make hidden */
+    opacity: 0;
+    /* z-index: -2; */
+    /* targeting to the input one */
+    position:absolute;
+    top:0;
+    left:0;
+    /* border:2px solid blue; */
+    height:100%;
+    width:100%;
+
+}
+
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+
+.formula-actions-cont{
+    height: 2rem;
+    background-color: #ecf0f1;
+    padding-left:1rem;
+    display: flex;
+    align-items: center;
+}
+/*( > *)--> mean select all */
+.formula-actions-cont > * {
+    /* so that height width will access able */
+    display:inline-block;
+    margin-right:0.7rem;
+}
+.address-bar{
+    width:5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+.formula-icon {
+    height:1.2rem;
+    width:1.2rem;;
+}
+.formula-bar{
+    width: calc(100vw - 5rem - 0.7rem - 0.7rem - 0.7rem);
+    border-radius: 0.2rem;
+}
+
+.formula-actions-cont > input {
+    border:none;
+    outline: none;
+    height:70%;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* this is Grid making functions */
+
+
+.grid-cont{
+    /* all left height which is in the sheet is given to it */
+    /* using calc function */
+    height: calc(100vh - 3rem - 3rem - 2rem - 3rem);
+    position:relative;
+    /* this make 100 till scrollable */
+    overflow: scroll;
+    background-color: #ecf0f1;
+}
+.top-left-dummy-box{
+    height:2rem;
+    width:2rem;
+    background-color: #747d8c;
+    position: fixed;
+    /* z-index apply only to the place where position applied */
+    z-index:4;
+}
+.address-column-cont{
+    /* border:2px solid hotpink; */
+    /* height:10rem; */
+    /* width:2rem; */
+    position: sticky;
+    top:2rem;
+    left:0;
+}
+/* this is inside the cells-cont */
+.cells-cont{
+    /* border: 2px solid blue; */
+    position: absolute;
+    top: 0;
+    left: 2rem;   
+}
+.address-row-cont{
+    /* border:2px solid black; */
+    /* height:2rem; */
+    /* width:2rem; */
+    /* background-color: #fdfeff; */
+    display: flex;
+        /* flex-direction: row; */
+    position:sticky;
+    top:0;
+    left:2rem;
+    z-index: 1;
+}
+
+
+/* ----------------------------this is the DOM style UI---------------------------- */
+.address-col {
+    height:2rem;
+    width:2rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #dfe4ea;
+}
+
+.address-rows {
+    height:2rem;
+    width:5rem;
+    border: 1px solid #dfe4ea;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cells-box{
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    outline: none;
+}
+.rowCont{
+    display: flex;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* sheet adding function css */
+.sheet-actions-cont {
+    /* border:2px solid green; */
+    height: 3rem;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    gap:1rem;
+
+}
+
+.sheet-actions-cont > * {
+    display: inline-block;
+}
+
+.sheet-add-icons {
+    /* border:2px solid red; */
+    /* margin-left:0.3rem; */
+    /* margin-right:0.3rem; */
+    width:2vw;
+}
+
+.sheet-add-icons:hover{
+    cursor: pointer;
+}
+
+.sheets-folder-cont {
+    /* border:2px solid blue; */
+    height: 80%;
+    width: 2rem;
+    /* background-color: yellow; */
+    /* cal the width 100vw - 2vw */
+    width: calc( 100vw - 2vw);
+    display: flex;
+    align-items: center;
+    overflow: auto;
+
+}
+
+.sheet-folder{
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    font-size:0.9rem;
+    height: 80%;
+    /* background-color: lightblue; */
+    text-align: center;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-content {
+    width: 5rem;
+    /* background-color: lightgreen; */
+    /* border: 1px solid blue; */
+
+
+}
